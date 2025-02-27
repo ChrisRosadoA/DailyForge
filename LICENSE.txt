@@ -1,0 +1,9 @@
+Copyright (c) [2025] [Christian D. Rosado Arroyo]
+
+All rights reserved.
+
+Permission is hereby granted, free of charge, to the owner of this repository to use, modify, and distribute the code within their projects. However, any other individual or entity must obtain explicit written permission from the owner before copying, modifying, distributing, or using any part of this codebase.
+
+Unauthorized reproduction, distribution, or modification of this software, or any portion thereof, may result in legal consequences as permitted by law.
+
+For permission requests, please contact: [chris.rosado95@gmail.com]
