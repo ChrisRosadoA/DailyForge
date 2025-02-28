@@ -1,4 +1,4 @@
-# Task Tracker & Goal Check-in Bot
+# Task Tracker & Goal Check-in Bot - In Development
 
 This Discord bot is designed to help users track their daily goals and tasks in a fun and interactive way, while rewarding them with XP points for task completion. Users can set goals for a specified duration (e.g., 1 month), and the bot will remind them daily to check in and mark tasks as completed.
 
