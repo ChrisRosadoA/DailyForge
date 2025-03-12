@@ -16,9 +16,28 @@ intents.message_content = True  # Enable message content intent
 bot = commands.Bot(command_prefix="!", intents=intents)
 
 # EVENT: on_ready - Runs when the bot is online
-#@bot.event
-#async def on_ready():
-#******************Insert User Welcome Message**********************
+@bot.event
+async def on_ready():
+    """Sends a welcome message when the bot is online."""
+    print("Obtaining bot information...")
+    print(f"Logged in as {bot.user}") #Gives the entire user object info (including ID, discriminator, etc.)
+    
+    channel_id = config.get("channel_id") # Get the channel ID from config.json
+
+
+#MOD So that if no channel ID is assigned, it lets the user know to go through first time setup 
+
+    if channel_id:
+        channel = bot.get_channel(int(channel_id))
+       
+        if channel:
+            await channel.send("✅ Welcome! The Daily Forge is now ready for use!")
+
+        else:
+            print(f"⚠️ Could not find the channel with ID {channel_id}.")
+    else:
+       print("⚠️ No channel ID found. Use !set_channel to set one.")
+
 
 # COMMAND: Set Channel where the bot will send messages
 @bot.command()
@@ -40,7 +59,7 @@ from datetime import datetime, timezone
 
 # COMMAND: Set goals for the user
 @bot.command()
-async def checkin(ctx):
+async def checkin(ctx): 
     """Sends an interactive check-in message with checkmark buttons."""
     user_id = str(ctx.author.id)
     
